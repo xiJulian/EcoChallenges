@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" nillable="true" type="tns:City" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="points" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="City">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="City" nillable="true" type="tns:City" />
+  <xs:complexType name="ArrayOfCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCity" nillable="true" type="tns:ArrayOfCity" />
+  <xs:complexType name="ArrayOfChallenge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Challenge" nillable="true" type="tns:Challenge" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChallenge" nillable="true" type="tns:ArrayOfChallenge" />
+  <xs:complexType name="Challenge">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="createdAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="points" type="xs:int" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Challenge" nillable="true" type="tns:Challenge" />
+  <xs:complexType name="ArrayOfUserChallenge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserChallenge" nillable="true" type="tns:UserChallenge" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserChallenge" nillable="true" type="tns:ArrayOfUserChallenge" />
+  <xs:complexType name="UserChallenge">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="challengeId" type="xs:int" />
+      <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="completedAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isCompleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="startedAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userEmail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserChallenge" nillable="true" type="tns:UserChallenge" />
+  <xs:complexType name="ArrayOfMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessage" nillable="true" type="tns:ArrayOfMessage" />
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="isRead" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sentAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Message" nillable="true" type="tns:Message" />
+</xs:schema>

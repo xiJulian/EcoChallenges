@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="WebApplication.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Challenges</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="styles/fontawesome/css/solid.css">
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+
+<body>
+  <form id="form1" runat="server">
+    <div>
+      <header>
+        <nav>
+          <div class="navbarPages">
+            <asp:HyperLink runat="server" NavigateUrl="~/Default.aspx" CssClass="navbarPage">HOME</asp:HyperLink>
+            <asp:HyperLink runat="server" NavigateUrl="~/Challenges.aspx" CssClass="navbarPage">CHALLENGES</asp:HyperLink>
+            <asp:HyperLink runat="server" NavigateUrl="~/Leaderboard.aspx" CssClass="navbarPage">TOP</asp:HyperLink>
+            <asp:HyperLink runat="server" NavigateUrl="~/Contact.aspx" CssClass="navbarPage">CONTACT</asp:HyperLink>
+          </div>
+          <div class="navbarSignin">
+            <asp:HyperLink ID="signInButton" runat="server" NavigateUrl="~/SignIn.aspx" CssClass="navbarPage signin">SIGN IN</asp:HyperLink>
+            <div class="profileDropdown">
+              <asp:HyperLink ID="profileButton" runat="server" NavigateUrl="#" CssClass="navbarPage signin" Visible="false"><i class="fa-solid fa-user"></i> </asp:HyperLink>
+              <div class="profileDropdownContent">
+                <asp:HyperLink runat="server" NavigateUrl="~/Profile.aspx" CssClass="profileDropdownFirst">PROFILE</asp:HyperLink>
+<%--                <asp:HyperLink runat="server" NavigateUrl="~/SignOut.aspx" CssClass="profileDropdownLast">LOGOUT</asp:HyperLink>--%>
+                <asp:LinkButton ID="logoutButton" runat="server" OnCommand="logoutButton_Click" CausesValidation="false" CssClass="profileDropdownLast">LOGOUT</asp:LinkButton>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <asp:ContentPlaceHolder ID="body" runat="server">
+      </asp:ContentPlaceHolder>
+    </div>
+  </form>
+</body>
+</html>

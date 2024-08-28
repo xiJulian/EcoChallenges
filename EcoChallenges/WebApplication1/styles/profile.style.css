@@ -1,0 +1,218 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fef9ed;
+  --main-color: #391f08;
+}
+
+.pageTitle {
+  color: var(--main-color)
+}
+
+.boxSection {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.boxNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60px;
+  border: 5px solid var(--main-color);
+  border-radius: 35px;
+  background-color: var(--main-color);
+  height: 450px;
+  padding: 5px;
+  /* margin-left: -100px; */
+}
+
+.boxNavItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: #fef9ed;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boxNavItem:hover {
+  background-color: #fef9ed;
+  color: var(--main-color);
+}
+
+.tooltipText {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  color: #fef9ed;
+  font-size: 15px;
+  background-color: var(--main-color);
+  border-radius: 15px;
+  padding: 10px 15px 10px 15px;
+  left: 120%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.boxNavItem:hover .tooltipText {
+  opacity: 1;
+  visibility: visible;
+}
+
+.selected {
+  background-color: #fef9ed;
+  color: var(--main-color);
+}
+
+.boxMain {
+  border: 5px solid var(--main-color);
+  border-radius: 40px;
+  height: 450px;
+  width: 600px;
+  padding: 0 0 0 0;
+  background: #f8ede1;
+}
+
+.boxTitle {
+  display: block;
+  padding: 13px 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background: var(--main-color);
+  color: #fff5f0;
+  width: 600px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.userInfo {
+  margin: 15px;
+}
+
+.userInfo div {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfoTitle {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.userInfoContent {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.pointsAndDelete {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  width: 600px;
+}
+
+.changePassword {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  height: 349px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.button {
+  background-color: var(--main-color);
+}
+
+input:hover, textarea:hover {
+  box-shadow: inset 0px 0px 0px 1px var(--main-color);
+}
+
+input:focus, textarea:focus {
+  box-shadow: inset 0px 0px 0px 2.5px var(--main-color);
+}
+
+.challenges {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 349px;
+  overflow: auto;
+  gap: 15px;
+}
+
+.challenges::-webkit-scrollbar {
+  width: 16px;
+}
+
+.challenges::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  background-clip: padding-box;
+}
+
+.challenges::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 30px;
+}
+
+.challenge {
+  border: 4px solid var(--main-color);
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.challenge div {
+  display: flex;
+  flex-direction: column;
+}
+
+.challenge a {
+  text-decoration: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.challengeTitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.challengeDate {
+  font-weight: normal;
+  font-size: 15px;
+}

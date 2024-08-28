@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfApp2.AddChallengeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Add Challenge" Height="400" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="0.7*" />
+            <RowDefinition Height="0.8*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" FontFamily="./Fonts/#Poppins ExtraBold" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#132b25">ADW NEW CHALLENGE</TextBlock>
+
+        <TextBlock Grid.Row="2" x:Name="errorTextBlock" FontFamily="./Fonts/#Poppins Regular" FontSize="16" HorizontalAlignment="Center" Foreground="MediumVioletRed" Visibility="Hidden"></TextBlock>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.45*" />
+                <ColumnDefinition Width="1.2*" />
+                <ColumnDefinition Width="0.1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1.2*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="1" FontFamily="./Fonts/#Poppins Regular" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom">Title</Label>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="titleTextBox" Height="30" Width="140" FontFamily="./Fonts/#Poppins Regular" HorizontalAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+
+            <Label Grid.Row="0" Grid.Column="3" FontFamily="./Fonts/#Poppins Regular" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom">Points</Label>
+            <TextBox Grid.Row="1" Grid.Column="3" x:Name="pointsTextBox" Height="30" Width="90" FontFamily="./Fonts/#Poppins Regular" HorizontalAlignment="Left" VerticalContentAlignment="Center" PreviewTextInput="pointsTextBox_PreviewTextInput"></TextBox>
+        </Grid>
+
+        <Label Grid.Row="5" FontFamily="./Fonts/#Poppins Regular" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 145, 0">Description</Label>
+        <TextBox Grid.Row="6" x:Name="descriptionTextBox" Height="30" Width="243" FontFamily="./Fonts/#Poppins Regular" VerticalContentAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" ></TextBox>
+
+        <Button Grid.Row="7" x:Name="addChallengeButton" Height="30" Width="100" FontFamily="./Fonts/#Poppins Regular" FontSize="16" Margin="0, 0, 150, 0" Click="addChallengeButton_Click">Add</Button>
+    </Grid>
+</Window>

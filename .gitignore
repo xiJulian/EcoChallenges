@@ -1,0 +1,10 @@
+.vs
+.DS_Store
+._.DS_Store
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+App_Data

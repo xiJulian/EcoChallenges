@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fef9ed;
+  background: no-repeat url('../images/formbackground.png');
+  background-size: cover;
+}
+
+.intro {
+  flex-direction: column;
+}
+
+.form {
+  padding: 10px;
+}
+
+.groups {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.signupButton {
+  margin: 0 0 5px;
+}
+
+input,
+select {
+  margin-bottom: 10px;
+}

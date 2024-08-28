@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fef9ed;
+  background: no-repeat url('../images/formbackground.png');
+  background-size: cover;
+}
+
+.intro {
+  flex-direction: column;
+}
+
+.form {
+  padding: 25px;
+}
+
+
+.signinButtons {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 7px;
+}
+
+.forgotPassword {
+  margin-left: auto;
+}

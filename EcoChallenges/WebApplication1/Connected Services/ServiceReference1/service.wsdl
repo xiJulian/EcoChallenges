@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserExists" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUserPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserPoints" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUserPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AdminExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminExists" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AdminExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCities" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCityByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityByName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCityByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCityById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCityById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OrderByCityName_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderByCityName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OrderByCityName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderByCityNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllChallenges_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChallenges" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllChallenges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChallengesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllChallengesByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChallengesByUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllChallengesByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChallengesByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllCompletedChallenges_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompletedChallenges" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllCompletedChallenges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompletedChallengesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUserChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUserChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompleteUserChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteUserChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompleteUserChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteUserChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUserChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserChallenge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUserChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessages" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MarkMessageAsRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkMessageAsRead" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MarkMessageAsRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkMessageAsReadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllUsers" message="tns:IService1_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllUsersResponse" message="tns:IService1_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserName" message="tns:IService1_GetUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserNameResponse" message="tns:IService1_GetUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserPassword" message="tns:IService1_GetUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserPasswordResponse" message="tns:IService1_GetUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetUserPassword" message="tns:IService1_SetUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetUserPasswordResponse" message="tns:IService1_SetUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UserExists" message="tns:IService1_UserExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UserExistsResponse" message="tns:IService1_UserExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUser" message="tns:IService1_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUserResponse" message="tns:IService1_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateUser" message="tns:IService1_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateUserResponse" message="tns:IService1_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUser" message="tns:IService1_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUserResponse" message="tns:IService1_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUserPoints" message="tns:IService1_AddUserPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUserPointsResponse" message="tns:IService1_AddUserPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AdminExists" message="tns:IService1_AdminExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AdminExistsResponse" message="tns:IService1_AdminExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllCities" message="tns:IService1_GetAllCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllCitiesResponse" message="tns:IService1_GetAllCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCityByName" message="tns:IService1_GetCityByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCityByNameResponse" message="tns:IService1_GetCityByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCityById" message="tns:IService1_GetCityById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCityByIdResponse" message="tns:IService1_GetCityById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderByCityName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OrderByCityName" message="tns:IService1_OrderByCityName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OrderByCityNameResponse" message="tns:IService1_OrderByCityName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChallenges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllChallenges" message="tns:IService1_GetAllChallenges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllChallengesResponse" message="tns:IService1_GetAllChallenges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetChallenge" message="tns:IService1_GetChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetChallengeResponse" message="tns:IService1_GetChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddChallenge" message="tns:IService1_AddChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddChallengeResponse" message="tns:IService1_AddChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateChallenge" message="tns:IService1_UpdateChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateChallengeResponse" message="tns:IService1_UpdateChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteChallenge" message="tns:IService1_DeleteChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteChallengeResponse" message="tns:IService1_DeleteChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChallengesByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllChallengesByUser" message="tns:IService1_GetAllChallengesByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllChallengesByUserResponse" message="tns:IService1_GetAllChallengesByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompletedChallenges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllCompletedChallenges" message="tns:IService1_GetAllCompletedChallenges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllCompletedChallengesResponse" message="tns:IService1_GetAllCompletedChallenges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserChallenge" message="tns:IService1_GetUserChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserChallengeResponse" message="tns:IService1_GetUserChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUserChallenge" message="tns:IService1_AddUserChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUserChallengeResponse" message="tns:IService1_AddUserChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteUserChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CompleteUserChallenge" message="tns:IService1_CompleteUserChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CompleteUserChallengeResponse" message="tns:IService1_CompleteUserChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserChallenge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUserChallenge" message="tns:IService1_DeleteUserChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUserChallengeResponse" message="tns:IService1_DeleteUserChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllMessages" message="tns:IService1_GetAllMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllMessagesResponse" message="tns:IService1_GetAllMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateMessage" message="tns:IService1_CreateMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateMessageResponse" message="tns:IService1_CreateMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteMessage" message="tns:IService1_DeleteMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteMessageResponse" message="tns:IService1_DeleteMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkMessageAsRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MarkMessageAsRead" message="tns:IService1_MarkMessageAsRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MarkMessageAsReadResponse" message="tns:IService1_MarkMessageAsRead_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap:operation soapAction="http://tempuri.org/IService1/UserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserPoints">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUserPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminExists">
+      <soap:operation soapAction="http://tempuri.org/IService1/AdminExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCities">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCityByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCityById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderByCityName">
+      <soap:operation soapAction="http://tempuri.org/IService1/OrderByCityName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChallenges">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllChallenges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChallengesByUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllChallengesByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompletedChallenges">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllCompletedChallenges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUserChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteUserChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/CompleteUserChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserChallenge">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUserChallenge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessages">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMessage">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessage">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkMessageAsRead">
+      <soap:operation soapAction="http://tempuri.org/IService1/MarkMessageAsRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
